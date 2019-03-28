@@ -13,7 +13,8 @@ const forcast = (latitude, longitude, callback) => {
         }
         else
         {
-            callback(undefined, "It is " + body.hourly.summary + " The current temperature is " + body.currently.temperature + "c."
+            callback(undefined, "It is " + body.hourly.summary + " The current temperature is " + body.currently.temperature + "c with a high of " + 
+            body.daily.data[0].temperatureHigh + "c and a low of " + body.daily.data[0].temperatureLow + "c."
             )
         }
     })
